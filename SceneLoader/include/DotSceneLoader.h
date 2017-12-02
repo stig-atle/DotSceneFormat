@@ -23,14 +23,16 @@
     class DotSceneLoader
     {
     public:
-        Ogre::TerrainGlobalOptions *mTerrainGlobalOptions;
-        
+		//! @todo Terrain commented out, port later.
+		//Ogre::TerrainGlobalOptions *mTerrainGlobalOptions;
+
         DotSceneLoader();
         virtual ~DotSceneLoader();
 
-        void parseDotScene(const Ogre::String &SceneName, const Ogre::String &groupName, Ogre::SceneManager *yourSceneMgr, Ogre::SceneNode *pAttachNode = NULL, const Ogre::String &sPrependNode = "");
+		void parseDotScene(const Ogre::String &SceneName, const Ogre::String &groupName, Ogre::SceneManager *yourSceneMgr, Ogre::SceneNode *pAttachNode = NULL, const Ogre::String &sPrependNode = NULL);
 
-        Ogre::TerrainGroup* getTerrainGroup() { return mTerrainGroup; }
+		//! @todo Terrain commented out, port later.
+		//Ogre::TerrainGroup* getTerrainGroup() { return mTerrainGroup; }
 
         const Ogre::ColourValue& getBackgroundColour() {
             return mBackgroundColour;
@@ -73,7 +75,8 @@
         Ogre::SceneNode *mAttachNode;
         Ogre::String m_sGroupName;
         Ogre::String m_sPrependNode;
-        Ogre::TerrainGroup* mTerrainGroup;
+		//! @todo Terrain commented out, port later.
+		//Ogre::TerrainGroup* mTerrainGroup;
         Ogre::Vector3 mTerrainPosition;
         Ogre::ColourValue mBackgroundColour;
     };
