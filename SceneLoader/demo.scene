@@ -1,0 +1,16 @@
+ <!--
+    In cpp code do:
+    #include "DotSceneLoader.h"
+    DotSceneLoader sceneLoader;
+    sceneLoader.parseDotScene("demo.scene",ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,mSceneMgr);
+ -->
+ 
+ <scene formatVersion="1">
+    <nodes>
+        <node name="ogrehead" id="3">
+            <position x="10.0" y="5" z="10.5" />
+            <scale x="0.1" y="0.1" z="0.1" />
+            <entity name="ogrehead" meshFile="ogrehead.mesh" static="false" />
+        </node>
+    </nodes>
+</scene>
