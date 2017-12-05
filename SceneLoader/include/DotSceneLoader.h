@@ -29,7 +29,7 @@
         DotSceneLoader();
         virtual ~DotSceneLoader();
 
-		void parseDotScene(const Ogre::String &SceneName, const Ogre::String &groupName, Ogre::SceneManager *yourSceneMgr, Ogre::SceneNode *pAttachNode = NULL, const Ogre::String &sPrependNode = NULL);
+		void parseDotScene(const Ogre::String &SceneName, const Ogre::String &groupName, Ogre::SceneManager *yourSceneMgr, Ogre::SceneNode *pAttachNode = NULL, const Ogre::String &sPrependNode = "");
 
 		//! @todo Terrain commented out, port later.
 		//Ogre::TerrainGroup* getTerrainGroup() { return mTerrainGroup; }

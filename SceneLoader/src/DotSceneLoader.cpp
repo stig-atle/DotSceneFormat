@@ -106,7 +106,8 @@ Ogre::ColourValue parseColour(rapidxml::xml_node<>* XMLNode)
 }
 }
 //! @todo Terrain commented out, port later.
-DotSceneLoader::DotSceneLoader() : mSceneMgr(0), /*mTerrainGroup(0),*/ mBackgroundColour(Ogre::ColourValue::Black)
+//DotSceneLoader::DotSceneLoader() : mSceneMgr(0), mTerrainGroup(0), mBackgroundColour(Ogre::ColourValue::Black)
+DotSceneLoader::DotSceneLoader() : mSceneMgr(0), mBackgroundColour(Ogre::ColourValue::Black)
 {
   //  mTerrainGlobalOptions = OGRE_NEW Ogre::TerrainGlobalOptions();
 }
@@ -116,8 +117,8 @@ DotSceneLoader::~DotSceneLoader()
 {
 	//if(mTerrainGroup)
 	//{
-	  //  OGRE_DELETE mTerrainGroup;
-	//}
+	 //   OGRE_DELETE mTerrainGroup;
+//	}
 
 	//OGRE_DELETE mTerrainGlobalOptions;
 }
@@ -217,9 +218,9 @@ void DotSceneLoader::processScene(rapidxml::xml_node<>* XMLRoot)
         processCamera(pElement);
 
     // Process terrain (?)
-    pElement = XMLRoot->first_node("terrain");
-    if(pElement)
-        processTerrain(pElement);
+	//pElement = XMLRoot->first_node("terrain");
+	//if(pElement)
+	 //   processTerrain(pElement);
 }
 
 void DotSceneLoader::processNodes(rapidxml::xml_node<>* XMLNode)
@@ -647,13 +648,14 @@ void DotSceneLoader::processNode(rapidxml::xml_node<>* XMLNode, Ogre::SceneNode 
         pElement = pElement->next_sibling("billboardSet");
     }
 
+	//! @todo - port to ogre 2x
     // Process plane (*)
-    pElement = XMLNode->first_node("plane");
-    while(pElement)
-    {
-        processPlane(pElement, pNode);
-        pElement = pElement->next_sibling("plane");
-    }
+	//pElement = XMLNode->first_node("plane");
+	//while(pElement)
+	//{
+	 //   processPlane(pElement, pNode);
+	  //  pElement = pElement->next_sibling("plane");
+	//}
 
     // Process userDataReference (?)
     pElement = XMLNode->first_node("userData");
